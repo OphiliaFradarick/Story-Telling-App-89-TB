@@ -1,4 +1,4 @@
-import React from "react";
+import *as React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import StackNavigator from "./StackNavigator";
 import Profile from "../screens/Profile";
@@ -6,8 +6,15 @@ import Logout from "../screens/Logout";
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNavigator = () => {
-  return (
+export default class DrawerNavigator extends React.Component  {
+  
+  constructor(){
+    super();
+    this.state={
+    }
+   }
+  render(){
+    return (
     <Drawer.Navigator>
       <Drawer.Screen
         name="Home"
@@ -26,6 +33,7 @@ const DrawerNavigator = () => {
       />
     </Drawer.Navigator>
   );
+  }
 };
 
-export default DrawerNavigator;
+
